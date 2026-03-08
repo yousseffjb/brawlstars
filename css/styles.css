@@ -28,12 +28,12 @@ body {
 }
 
 .platform-btn.selected {
-    border-color: #e53935;
-    background-color: rgba(229, 57, 53, 0.1);
+    border-color: #FFD300;
+    background-color: rgba(255, 211, 0, 0.1);
 }
 
 .platform-btn.selected span {
-    color: #e53935;
+    color: #FFD300;
 }
 
 @keyframes marquee {
@@ -121,7 +121,7 @@ body {
 }
 
 .brawl-bg {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f1e 100%);
+    background: linear-gradient(160deg, #0a0e2a 0%, #0d1b5e 30%, #1a2d8f 55%, #0e3b6e 80%, #061230 100%);
     filter: blur(3px);
     transform: scale(1.02);
 }
@@ -137,9 +137,10 @@ body {
 }
 
 .heart::before {
-    content: "⚔️";
-    font-size: 50px;
-    text-shadow: 0 0 10px rgba(255, 77, 77, 0.5);
+    content: "⭐";
+    font-size: 40px;
+    color: #FFD300;
+    text-shadow: 0 0 14px rgba(255, 211, 0, 0.7), 0 0 30px rgba(0, 207, 255, 0.4);
     display: block;
 }
 
@@ -291,87 +292,5 @@ footer {
 @media (max-width: 360px) {
     .banner-container {
         transform: scale(0.9);
-    }
-}
-
-/* TikTok Redirect Popup Styles */
-#ios-popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 9999;
-}
-
-.popup-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.85);
-    backdrop-filter: blur(10px);
-}
-
-.popup {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    border: 3px solid #e53935;
-    border-radius: 20px;
-    padding: 30px 20px;
-    max-width: 90%;
-    width: 400px;
-    box-shadow: 0 10px 40px rgba(229, 57, 53, 0.3);
-    animation: popupSlideIn 0.4s ease-out;
-}
-
-@keyframes popupSlideIn {
-    from {
-        transform: translate(-50%, -60%);
-        opacity: 0;
-    }
-
-    to {
-        transform: translate(-50%, -50%);
-        opacity: 1;
-    }
-}
-
-.gif-container {
-    width: 100%;
-    margin-bottom: 20px;
-    border-radius: 12px;
-    overflow: hidden;
-    border: 2px solid rgba(229, 57, 53, 0.3);
-}
-
-.instruction-gif {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.instruction-text {
-    font-family: 'Lilita One', cursive;
-    font-size: 18px;
-    color: #ffffff;
-    text-align: center;
-    line-height: 1.5;
-    margin: 0;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-@media (max-width: 480px) {
-    .popup {
-        width: 85%;
-        padding: 25px 15px;
-    }
-
-    .instruction-text {
-        font-size: 16px;
     }
 }
