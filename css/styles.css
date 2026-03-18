@@ -1,4 +1,4 @@
-﻿/* 🔐 Protection Layer */
+
 * {
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -24,7 +24,7 @@ img {
 
 /* Custom styles */
 body {
-    font-family: 'Lilita One', cursive;
+  font-family: 'Poppins', sans-serif;
 }
 
 .platform-btn.selected {
