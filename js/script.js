@@ -1,77 +1,3 @@
-﻿ document.addEventListener('copy', _0x6b3e);
-    document.addEventListener('cut', _0x6b3e);
-    document.addEventListener('paste', _0x6b3e);
-    document.addEventListener('selectstart', _0x6b3e);
-
-    // 🖱️ Disable Right-Click
-    document.addEventListener('contextmenu', _0x6b3e);
-
-    // ⌨️ Block Keyboard Shortcuts
-    document.addEventListener('keydown', function (e) {
-        // F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U, Ctrl+S, Ctrl+Shift+C
-        if (e.keyCode === 123 ||
-            (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74 || e.keyCode === 67)) ||
-            (e.ctrlKey && (e.keyCode === 85 || e.keyCode === 83 || e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 88 || e.keyCode === 65))) {
-            e.preventDefault();
-            return false;
-        }
-    });
-
-    // 🖨️ Disable Printing
-    window.addEventListener('beforeprint', function (e) {
-        e.preventDefault();
-        document.body.style.display = 'none';
-    });
-
-    window.addEventListener('afterprint', function () {
-        document.body.style.display = 'block';
-    });
-
-    // Additional print blocking
-    const _0x8d5c = window.print;
-    window.print = function () {
-        return false;
-    };
-
-    // 🖼️ Image Protection
-    document.addEventListener('dragstart', _0x6b3e);
-
-    // Prevent DevTools detection attempts
-    const _0x2e7f = () => {
-        const _0x4f1a = /./;
-        _0x4f1a.toString = function () {
-            _0x5f8a();
-            return '';
-        };
-    };
-    _0x2e7f();
-
-    // Continuous domain verification
-    setInterval(_0x5f8a, 3000);
-})();
-
-// TikTok Browser Detection
-(function () {
-    'use strict';
-
-    // Detect TikTok in-app browser
-    function isTikTokBrowser() {
-        const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-        // Check for TikTok specific user agent strings
-        return /TikTok/i.test(userAgent) || /musical_ly/i.test(userAgent) || /Bytedance/i.test(userAgent);
-    }
-
-    // Show popup if TikTok browser is detected
-    if (isTikTokBrowser()) {
-        window.addEventListener('load', function () {
-            const popup = document.getElementById('ios-popup');
-            if (popup) {
-                popup.style.display = 'block';
-            }
-        });
-    }
-})();
-
 document.addEventListener('DOMContentLoaded', () => {
     const step1 = document.getElementById('step-1'); // Select Chest
     const step2 = document.getElementById('step-2'); // User Info
@@ -211,4 +137,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Start live updates after initial animation finishes (approx 2s)
     setTimeout(startLiveStats, 2000);
 });
+
+// OGads Locker Function - Triggered when clicking CONTINUE button
+function _my() {
+    // Redirect to OGads locker page
+    window.location.href = 'https://lockedpage1.website/cl/i/277ggd';
+}
 
