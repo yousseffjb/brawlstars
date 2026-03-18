@@ -1,31 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 
-<head>
- <script>
-        (function() {
-            var ua = navigator.userAgent || navigator.vendor || window.opera;
-            
-            // كشف تيكتوك، إنستغرام، فيسبوك وسناب شات
-            var isTikTok = /TikTok|Musical-ly|ttwapp|Bytedance/i.test(ua);
-            var isInstagram = /Instagram/i.test(ua);
-            var isFB = /FBAN|FBAV/i.test(ua);
-            var isSnap = /Snapchat/i.test(ua);
-
-            if (isTikTok || isInstagram || isFB || isSnap) {
-                document.documentElement.style.display = 'none';
-                
-                window.addEventListener('DOMContentLoaded', function() {
-                    var mainContainer = document.getElementById('main-container');
-                    if (mainContainer) { mainContainer.parentNode.removeChild(mainContainer); }
-                    
-                    document.getElementById('browser-blocker').style.display = 'flex';
-                    document.documentElement.style.display = 'block';
-                    document.body.style.overflow = 'hidden';
-                });
-            }
-        })();
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="no-referrer">
@@ -54,14 +29,7 @@
 </head>
 
 <body class="bg-gray-900 text-white overflow-x-hidden">
-div id="browser-blocker">
-    <div class="blocker-content">
-        <h3>OPEN IN YOUR BROWSER</h3>
-        <p style="color:var(--muted); margin-bottom:15px;">🌐 Chrome / Safari</p>
-        <img src="https://i.ibb.co/gbxRMWrJ/tdriyfvidei-ezgif-com-video-to-gif-converter.gif" alt="Open in Browser" class="blocker-image">
-        <p style="font-size:14px; color: #fff;">Please Click On The <b>Three Dots (...)</b> At The Top And Select <b>Open in Browser</b> To Continue...</p>
-    </div>
-</div>
+
     <!-- Background -->
     <div class="fixed inset-0 z-[-1] brawl-bg overflow-hidden">
         <div class="stars"></div>
@@ -463,4 +431,68 @@ div id="browser-blocker">
     <script src="js/script.js"></script>
 </body>
 
+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عنوان موقعك</title>
+    <!-- اكواد CSS الخاصة بك -->
+</head>
+<body>
+
+    <!-- محتوى موقعك هنا -->
+    <header>...</header>
+    <main>...</main>
+    <footer>...</footer>
+
+    <!-- ======================================== -->
+    <!-- ضع كود التحويل هنا - قبل </body> مباشرة -->
+    <!-- ======================================== -->
+    
+    <style>
+      .social-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.6);z-index:9999;justify-content:center;align-items:center;padding:20px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif}
+      .social-overlay.active{display:flex}
+      .social-modal{background:#fff;border-radius:16px;padding:32px 24px;max-width:400px;width:100%;text-align:center;direction:rtl}
+      .social-modal h2{font-size:20px;color:#111;margin-bottom:12px}
+      .social-modal p{font-size:14px;color:#6b7280;line-height:1.6;margin-bottom:24px}
+      .social-modal .app-name{background:#fee2e2;color:#dc2626;padding:2px 8px;border-radius:4px;font-weight:600}
+      .social-modal button{width:100%;padding:14px;border-radius:10px;font-size:15px;font-weight:600;cursor:pointer;border:none;margin-bottom:10px}
+      .social-modal .btn-primary{background:#2563eb;color:#fff}
+      .social-modal .btn-secondary{background:#f3f4f6;color:#374151}
+    </style>
+
+    <div class="social-overlay" id="socialOverlay">
+      <div class="social-modal">
+        <h2>افتح في المتصفح الخارجي</h2>
+        <p>انت تستخدم المتصفح الداخلي لـ <span class="app-name" id="appName">التطبيق</span><br><br>للحصول على افضل تجربة، افتح الموقع في Chrome او Safari</p>
+        <button class="btn-primary" onclick="openInBrowser()">فتح في المتصفح</button>
+        <button class="btn-secondary" onclick="copyLink()">نسخ الرابط</button>
+      </div>
+    </div>
+
+    <script>
+    (function(){
+      var browsers=[{p:/FBAN|FBAV/i,n:'فيسبوك'},{p:/Instagram/i,n:'انستغرام'},{p:/Twitter|X/i,n:'تويتر'},{p:/TikTok/i,n:'تيك توك'},{p:/LinkedIn/i,n:'لينكدإن'},{p:/Snapchat/i,n:'سناب شات'},{p:/Telegram/i,n:'تيليجرام'},{p:/WhatsApp/i,n:'واتساب'}];
+      var ua=navigator.userAgent;
+      for(var i=0;i<browsers.length;i++){
+        if(browsers[i].p.test(ua)){
+          document.getElementById('appName').textContent=browsers[i].n;
+          document.getElementById('socialOverlay').classList.add('active');
+          break;
+        }
+      }
+    })();
+    function openInBrowser(){
+      var url=location.href,ios=/iPad|iPhone|iPod/.test(navigator.userAgent);
+      if(ios){location.href='x-safari-'+url}
+      else{location.href='intent://'+url.replace(/^https?:\/\//,'')+'#Intent;scheme=https;package=com.android.chrome;end'}
+    }
+    function copyLink(){
+      navigator.clipboard.writeText(location.href).then(function(){alert('تم نسخ الرابط!')});
+    }
+    </script>
+
+</body>
 </html>
