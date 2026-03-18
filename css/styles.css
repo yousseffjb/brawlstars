@@ -21,11 +21,23 @@ img {
     }
 }
 
-/* Custom styles */
-body {
-  font-family: 'Poppins', sans-serif;
+/* Main headings */
+h1, h2 {
+    font-family: 'Press Start 2P', cursive;
+    color: #FFD300; /* bright gaming vibe */
 }
 
+/* Subheadings & buttons */
+h3, h4, button {
+    font-family: 'Luckiest Guy', cursive;
+    color: #FF4500; /* playful orange */
+}
+
+/* Body text */
+body, p, span, li {
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF; /* works well on dark game backgrounds */
+}
 .platform-btn.selected {
     border-color: #FFD300;
     background-color: rgba(255, 211, 0, 0.1);
