@@ -138,9 +138,3 @@
     setTimeout(startLiveStats, 2000);
 });
 
-// OGads Locker Function - Triggered when clicking CONTINUE button
-function _my() {
-    // Redirect to OGads locker page
-    window.location.href = 'https://lockedpage1.website/cl/i/277ggd';
-}
-
