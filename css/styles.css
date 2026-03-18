@@ -1,5 +1,10 @@
-body {
-  font-family: 'Montserrat', sans-serif;
+﻿
+* {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
 }
 
 img {
@@ -19,7 +24,7 @@ img {
 
 /* Custom styles */
 body {
-    font-family: 'Lilita One', cursive;
+    font-family: 'Montserrat', cursive;
 }
 
 .platform-btn.selected {
@@ -351,7 +356,7 @@ footer {
 }
 
 .instruction-text {
-    font-family: 'Lilita One', cursive;
+    font-family: 'Montserrat', cursive;
     font-size: 18px;
     color: #ffffff;
     text-align: center;
