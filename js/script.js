@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+﻿document.addEventListener('DOMContentLoaded', () => {
     const step1 = document.getElementById('step-1'); // Select Chest
     const step2 = document.getElementById('step-2'); // User Info
     const step3 = document.getElementById('step-3'); // Generator
